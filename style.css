@@ -1,0 +1,34 @@
+ :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#10b981;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(16,185,129,0.06), transparent), var(--bg);
+      color: #e6eef8; min-height:100vh; display:flex; align-items:center; justify-content:center;
+      padding:24px;
+    }
+    .container{width:100%;max-width:760px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:20px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    header h1{font-size:20px;margin:0}
+    .controls{display:flex;gap:8px;align-items:center}
+    .btn{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;color:var(--muted);cursor:pointer}
+    .btn.primary{border-color:var(--accent);color:var(--accent);}
+    .switch{display:flex;gap:8px;align-items:center}
+    main{display:flex;gap:20px;flex-wrap:wrap}
+    .board-wrap{flex:1;min-width:260px}
+    .board{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));padding:12px;border-radius:12px}
+    .cell{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));height:92px;display:flex;align-items:center;justify-content:center;font-size:40px;border-radius:8px;color:#e6eef8;cursor:pointer;user-select:none}
+    .cell:hover{transform:translateY(-3px)}
+    .info{width:260px;min-width:220px}
+    .card{background:var(--card);padding:12px;border-radius:12px}
+    .status{margin-bottom:12px}
+    .score{display:flex;gap:12px;justify-content:space-between;margin-top:8px}
+    .small{font-size:13px;color:var(--muted)}
+    .highlight{color:var(--accent);font-weight:600}
+    footer{margin-top:14px;text-align:center;color:var(--muted);font-size:13px}
+    @media(max-width:640px){.board{gap:8px}.cell{height:72px;font-size:34px}}
